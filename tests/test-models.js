@@ -8,7 +8,7 @@ async function probarModelos() {
     console.log('✅ Conectado a MongoDB');
 
     // Crear un proveedor de ejemplo
-    const Proveedor = require('./models/Proveedor');
+    const Proveedor = require('../models/Proveedor');
     const proveedor = new Proveedor({
       nombre: 'Tech Solutions',
       contacto: 'Juan Pérez',
