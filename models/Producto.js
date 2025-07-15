@@ -20,7 +20,7 @@ const productoSchema = new mongoose.Schema({
     required: [true, 'La categoría es obligatoria'],
     trim: true,
     enum: {
-      values: ['Electrónicos', 'Ropa', 'Hogar', 'Deportes', 'Libros', 'Otros'],
+      values: ['Electrónicos', 'Ropa', 'Hogar', 'Deportes', 'Libros','Juguetes', 'Otros'],
       message: 'Categoría no válida'
     }
   },

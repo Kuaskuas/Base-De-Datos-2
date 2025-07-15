@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const connectDB = require('../config/database');
-const Proveedor = require('../models/Proveedor');
-const Producto = require('../models/Producto');
-const Movimiento = require('../models/Movimiento');
+const connectDB = require('./config/database');
+const Proveedor = require('./models/Proveedor');
+const Producto = require('./models/Producto');
+const Movimiento = require('./models/Movimiento');
 
 async function seedProveedores() {
   await Proveedor.deleteMany({});
@@ -39,7 +39,7 @@ async function seedProductos() {
     {
       codigo: 'P001',
       nombre: 'Producto A',
-      categoria: 'Electrónica',
+      categoria: 'Electrónicos',
       precio: 100,
       stockActual: 10,
       stockMinimo: 2,
