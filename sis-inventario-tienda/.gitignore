@@ -1,0 +1,25 @@
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directories
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
