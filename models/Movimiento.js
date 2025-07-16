@@ -64,12 +64,12 @@ movimientoSchema.index({ usuario: 1 });
 movimientoSchema.index({ fecha: 1, tipo: 1 });
 
 // Virtual para calcular el impacto en el stock
-movimientoSchema.virtual('impactoStock').get(function() {
+movimientoSchema.virtual('impactoStock').get(function () {
   return this.tipo === 'entrada' ? this.cantidad : -this.cantidad;
 });
 
 // Método estático para obtener movimientos por rango de fechas
-movimientoSchema.statics.obtenerPorRangoFecha = function(fechaInicio, fechaFin) {
+movimientoSchema.statics.obtenerPorRangoFecha = function (fechaInicio, fechaFin) {
   return this.find({
     fecha: {
       $gte: fechaInicio,
@@ -79,7 +79,7 @@ movimientoSchema.statics.obtenerPorRangoFecha = function(fechaInicio, fechaFin) 
 };
 
 // Método estático para obtener resumen de movimientos
-movimientoSchema.statics.obtenerResumen = function(fechaInicio, fechaFin) {
+movimientoSchema.statics.obtenerResumen = function (fechaInicio, fechaFin) {
   return this.aggregate([
     {
       $match: {

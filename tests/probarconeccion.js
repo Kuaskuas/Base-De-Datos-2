@@ -1,4 +1,4 @@
-const connectDB = require('./config/database');
+const connectDB = require('../config/database');
 
 // Función para probar la conexión
 const testConnection = async () => {
@@ -9,6 +9,7 @@ const testConnection = async () => {
     console.log('✅ ¡Conexión exitosa!');
     
     // Mostrar información de la base de datos
+    
     const mongoose = require('mongoose');
     const db = mongoose.connection.db;
     
