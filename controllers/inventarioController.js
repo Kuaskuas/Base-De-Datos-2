@@ -52,7 +52,7 @@ exports.reporteMovimientos = async (req, res) => {
   }
 };
 
-// CRUD básico para productos (ejemplo)
+// CRUD basico para productos
 exports.obtenerProductos = async (req, res) => {
   try {
     const resultado = await inventarioService.obtenerTodosLosProductos();
