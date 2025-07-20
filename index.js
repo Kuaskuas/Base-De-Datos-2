@@ -1,14 +1,14 @@
 const express = require('express');
 require('dotenv').config();
 const app = express();
-const inventarioRoutes = require('./routes/inventarioRoutes');
+const Controlador = require('./routes/index.routes');
 const connectDB = require('./config/database');
 
 // Middlewares
 app.use(express.json());
 
 // Rutas
-app.use('/api', inventarioRoutes);
+app.use('/api', Controlador);
 
 // Puerto
 const PORT = process.env.PORT || 3000;

@@ -5,7 +5,11 @@ const Producto = require('./models/Producto');
 const Movimiento = require('./models/Movimiento');
 
 async function seedProveedores() {
-  await Proveedor.deleteMany({});
+  const count = await Proveedor.countDocuments();
+  if (count > 0) {
+    console.log('Proveedores ya existen, se omite seed.');
+    return;
+  }
   await Proveedor.insertMany([
     {
       nombre: 'Proveedor Uno',
@@ -30,7 +34,11 @@ async function seedProveedores() {
 }
 
 async function seedProductos() {
-  await Producto.deleteMany({});
+  const count = await Producto.countDocuments();
+  if (count > 0) {
+    console.log('Productos ya existen, se omite seed.');
+    return;
+  }
   const proveedores = await Proveedor.find().limit(3);
   if (proveedores.length < 3) {
     throw new Error('Se necesitan al menos 3 proveedores para este seeder.');
@@ -68,7 +76,11 @@ async function seedProductos() {
 }
 
 async function seedMovimientos() {
-  await Movimiento.deleteMany({});
+  const count = await Movimiento.countDocuments();
+  if (count > 0) {
+    console.log('Movimientos ya existen, se omite seed.');
+    return;
+  }
   const productos = await Producto.find().limit(3);
   if (productos.length < 3) {
     throw new Error('Se necesitan al menos 3 productos para este seeder.');
