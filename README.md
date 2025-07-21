@@ -31,7 +31,6 @@ Este proyecto es una API REST para la gestión de inventario de una tienda, desa
    ```env
    MONGO_URI=mongodb://localhost:27017/inventario_tienda
    PORT=3000
-   JWT_SECRET=tu_clave_secreta
    ```
 4. (Opcional) Ejecuta el seeder para poblar la base de datos con datos de ejemplo:
    ```bash
