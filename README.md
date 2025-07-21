@@ -100,6 +100,7 @@ POST /api/movimientos
 - Los movimientos guardan el stock anterior y posterior para trazabilidad.
 - Los productos y proveedores se eliminan de forma lógica (campo `activo: false`).
 
-## Licencia
+## Participantes
 
-MIT
+- Camilo Dietrich
+- Garnica Martin Andres
